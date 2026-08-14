@@ -1,5 +1,6 @@
 dna = input("Enter a DNA sequence: ")
 dna = dna.upper()
+dna = dna.replace(" ", "")
 
 print("You entered: ", dna )
 
@@ -36,6 +37,24 @@ print(f"Most_common: {most_common}")
 
 least_common = min(counts, key= counts.get)
 print(f"Least_common: {least_common}")
+
+dna_reversed = dna[::-1]
+print(f"reversed : {dna_reversed}" )
+
+pairs = {"A": "T", "T": "A", "G": "C", "C": "G"}
+dna_complement = ""
+for letter in dna:
+   dna_complement += pairs[letter]
+print(f"complement : {dna_complement}")
+
+dna_reversed_complement = dna_complement[::-1]
+print(f"reversed complement : {dna_reversed_complement}")
+
+rna = dna.replace("T", "U")
+print(f"RNA : {rna}")
+   
+
+
 
 
 
