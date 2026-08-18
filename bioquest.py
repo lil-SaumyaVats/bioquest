@@ -52,6 +52,28 @@ print(f"reversed complement : {dna_reversed_complement}")
 
 rna = dna.replace("T", "U")
 print(f"RNA : {rna}")
+
+motif = input("Enter motif : ")
+motif = motif.upper()
+if motif in dna:
+    print("Motif :", "Found it!")
+else:
+    print("Motif :", "Not found")
+
+motif_count = dna.count(motif)
+print(f"Motif count : {motif_count}")
+
+restriction_site = "GAATTC"
+if restriction_site in dna:
+    print("Restriction site :", "Found!")
+else:
+    print("Restriction site :","Not found!")    
+
+start_codon = "ATG"
+position = dna.find(start_codon)
+print(f"Codon position : {position}")
+
+
    
 
 
